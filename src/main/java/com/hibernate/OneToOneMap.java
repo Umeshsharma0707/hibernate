@@ -14,16 +14,17 @@ public class OneToOneMap {
 	        Session openSession = factory.openSession();
 	        openSession.beginTransaction();
 	        
-	        Question q2 = new Question();
-	        q2.setQuestionId(84);
-	        q2.setQuestion("what is python");
+			
+			  Question q2 = new Question(); q2.setQuestionId(8);
+			  q2.setQuestion("what is java");
+			  
+			  Answer a2 = new Answer(50,"java is a programming language");
+			  
+			  q2.setAnswer(a2); openSession.save(q2); openSession.save(a2);
+			  openSession.getTransaction().commit();
+			 
 	        
-	        Answer a2 = new Answer(14,"pythonis a programming language");
 	        
-	        q2.setAnswer(a2);
-	        openSession.save(q2);
-	        openSession.save(a2);
-	        openSession.getTransaction().commit();
 	        
 	        openSession.close();;
 			factory.close();

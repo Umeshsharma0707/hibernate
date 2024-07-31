@@ -12,13 +12,19 @@
 		<property name="hibernate.dialact">org.hibernate.dialect.MySQL8Dialect</property>
 		<property name="hibernate.hbm2ddl.auto">create</property>
 		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
 		<!-- entities mapping -->
 		<!-- <mapping class="com.hibernate.Employee"/>
 		<mapping class="com.hibernate.Address"/>
 		<mapping class="com.hibernate.Student"/>
-		<mapping class="com.hibernate.Certificate"/> -->
+		<mapping class="com.hibernate.Certificate"/> 
 		<mapping class="com.hibernate.Question"/>
-		<mapping class="com.hibernate.Answer"/>
+		<mapping class="com.hibernate.Answer"/> 
+		<mapping class="com.hibernate.Person"/>
+		<mapping class="com.hibernate.PersonAddress" /> -->
+		<mapping class="com.hibernate.Developer"/>
+		<mapping class="com.hibernate.Project" />
+		
 		
     </session-factory>
 </hibernate-configuration>
